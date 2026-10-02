@@ -37,3 +37,28 @@ var maxArea_TP = function(height) {
 }
 
 console.log(maxArea_TP(height = [1,7,2,5,4,7,3,6]));
+
+
+//O(n)
+//Solution: Two Pointers (Least Memory) 
+// Refer to LeetCode
+var maxArea_least_memory = function(heights) {
+  let left = 0;
+  let right = heights.length - 1;
+
+  let maxArea = 0;
+
+  while (left < right) {
+    const leftHeight = heights[left];
+    const rightHeight = heights[right];
+
+    const minHeight = Math.min(leftHeight, rightHeight);
+
+    maxArea = Math.max(maxArea, minHeight * (right - left));
+
+    if (leftHeight < rightHeight) left++;
+    else right--;
+  }
+  
+  return maxArea;
+}
