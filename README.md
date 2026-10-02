@@ -20,14 +20,16 @@ Repo ghi lại quá trình luyện giải thuật và SQL để chuẩn bị ph�
 
 ```
 .
-├── Blind75_Leetcode/
+├── Blind75/
 │   ├── Array/
 │   ├── Binary/
 │   ├── Dynamic_Programming/
 │   └── ...
-├── Hello-interview/
+├── Hello_interview/
 │   ├── Two_Pointers/
 │   ├── ...
 ├── sql50/
+│   ├── Select/
+│   ├── Basic_Joins/
 └── README.md
 ```
