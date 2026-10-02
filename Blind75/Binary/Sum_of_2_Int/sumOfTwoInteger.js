@@ -22,3 +22,13 @@ var sumOfTwoIntegers = function(a, b) {
 }   
 
 console.log(sumOfTwoIntegers(1, 2));
+
+
+var sumOfTwoIntegers_Bit_Manipulation = function(a, b) {
+    while (b !== 0) {
+        let carry = (a & b) << 1;
+        a = a ^ b;
+        b = carry;
+    }
+    return a;
+}
