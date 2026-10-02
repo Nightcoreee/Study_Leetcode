@@ -5,7 +5,7 @@ Repo ghi lại quá trình luyện giải thuật và SQL để chuẩn bị ph�
 ## 📚 Nội dung
 
 | Danh sách | Mô tả | Ngôn ngữ |
-|---|---|---|---|
+|---|---|---|
 | [Blind 75](https://leetcode.com/problem-list/oizxjoit/) | 75 bài kinh điển bao phủ các dạng cấu trúc dữ liệu và giải thuật phổ biến | JavaScript |
 | [Hello Interview](https://www.hellointerview.com/learn/code/two-pointers/overview) | Tuyển tập bài theo từng pattern từ Hello Interview | JavaScript |
 | [SQL 50](https://leetcode.com/studyplan/top-sql-50/) | 50 bài SQL của LeetCode: SELECT, JOIN, GROUP BY, subquery, window function | SQL (PostgreSQL) |
