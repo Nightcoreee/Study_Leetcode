@@ -19,4 +19,4 @@ var valid_triangle_number_TP = function(nums) {
     return count;
 }
 
-console.log(valid_triangle_number_TP([2,2,3,4]));
+console.log(valid_triangle_number_TP([2,2,3,4])); 

@@ -17,7 +17,6 @@
 
 -- Return the result table sorted by id in ascending order.
 
--- The result format is in the following example.
 
 --Solution
 SELECT DISTINCT author_id AS id

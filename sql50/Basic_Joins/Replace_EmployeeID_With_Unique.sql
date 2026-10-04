@@ -26,7 +26,6 @@
 
 -- Return the result table in any order.
 
--- The result format is in the following example.
 
 --Solution
 SELECT u.unique_id, e.name

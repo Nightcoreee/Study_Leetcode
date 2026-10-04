@@ -17,7 +17,6 @@
 -- not referred by any customer.
 -- Return the result table in any order.
 
--- The result format is in the following example.
 
 /* Solution */
 SELECT name

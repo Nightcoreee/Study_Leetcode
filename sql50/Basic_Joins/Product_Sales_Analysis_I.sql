@@ -31,7 +31,6 @@
 
 -- Return the resulting table in any order.
 
--- The result format is in the following example.
 
 --Solution
 SELECT p.product_name, s.year, s.price
