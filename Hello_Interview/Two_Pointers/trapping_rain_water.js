@@ -10,7 +10,7 @@ var trapping_rain_water_TP = function (height) {
     while (left < right) {
         if (leftMax < rightMax) {
             left++;
-            if (height[left] < leftMax) {
+            if (height[left] >= leftMax) {
                 leftMax = height[left];
             } else {
                 totalWater += leftMax - height[left];
