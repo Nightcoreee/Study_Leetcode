@@ -22,15 +22,7 @@
 -- Each row of this table contains the id of a user and the contest they registered into.
  
  --Solution
-SELECT r.contest_id, ROUND(COUNT(u.user_id) / (SELECT COUNT(*) FROM Users) * 100, 2) percentage
-FROM Users u
-JOIN Register r ON u.user_id = r.user_id
-GROUP BY r.contest_id
-ORDER BY r.contest_id ASC, percentage DESC
-
-
---Order Solution
-SELECT r.contest_id, ROUND(COUNT(r.user_id) / (SELECT COUNT(*) FROM Users) * 100, 2) percentage
-FROM Register r
-GROUP BY r.contest_id
-ORDER BY r.contest_id ASC, percentage DESC
+SELECT contest_id, ROUND(COUNT(user_id) / (SELECT COUNT(*) FROM Users) * 100, 2) percentage
+FROM Register 
+GROUP BY contest_id
+ORDER BY percentage DESC, contest_id ASC
