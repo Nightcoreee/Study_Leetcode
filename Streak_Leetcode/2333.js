@@ -32,3 +32,5 @@ var minSumSquareDiff = function (nums1, nums2, k1, k2) {
   }
   return result;
 };
+
+console.log(minSumSquareDiff([1,4,10,12], [5,8,6,9], 1, 1));

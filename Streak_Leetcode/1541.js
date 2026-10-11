@@ -2,7 +2,7 @@
 //Solution: Greedy
 var minInsertions = function(s) {
     let open = 0;
-    let res = 0;
+    let insert = 0;
     for (let i = 0; i < s.length; i++) {
         if (s[i] === '(') {
             open++;
@@ -10,17 +10,17 @@ var minInsertions = function(s) {
             if (i + 1 < s.length && s[i + 1] === ')') {
                 i++;        
             } else {
-                res++;
+                insert++;
             }
 
-            if (open > 0) {
-                open--;
+            if (open === 0) {
+                insert++;
             } else {
-                res++;     
+                open--;     
             }
         }
     }
-    return res + open * 2;
+    return insert + open * 2;
 };
 
 console.log(minInsertions("(()))"));
