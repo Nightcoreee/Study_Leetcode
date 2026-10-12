@@ -1,4 +1,4 @@
-# 🚀 LeetCode Grind: Blind 75 + Hello Interview + SQL 50
+# LeetCode Grind: Blind 75 + Hello Interview + SQL 50
 
 Repo ghi lại quá trình luyện giải thuật và SQL để chuẩn bị phỏng vấn backend. Mỗi bài đều có lời giải bằng **JavaScript** (và **SQL** cho phần database), kèm ghi chú cách nghĩ, độ phức tạp và các hướng giải khác.
 
