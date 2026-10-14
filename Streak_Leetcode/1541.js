@@ -1,5 +1,6 @@
-//O(n)
+//Time: O(n)
 //Solution: Greedy
+//Problem: Minimum Insertions to Balance a Parentheses String
 var minInsertions = function(s) {
     let open = 0;
     let insert = 0;

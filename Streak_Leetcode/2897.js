@@ -1,5 +1,6 @@
-//O(n)
+//Time: O(n)
 //Solution: Greedy each other bit
+//Problem: Apply Operations on Array to Maximize Sum of Squares
 var maxSum = function(nums, k) {
     const MOD = 1000000007n;
     const cnt = new Array(30).fill(0);

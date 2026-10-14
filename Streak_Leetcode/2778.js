@@ -1,5 +1,6 @@
-//O(n)
+//Time: O(n)
 //Solution: Brute Force
+//Problem: Sum of Squares of Special Elements 
 var sumOfSquares = function(nums) {
     let sum = 0;
 

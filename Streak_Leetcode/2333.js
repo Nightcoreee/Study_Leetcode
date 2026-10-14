@@ -1,5 +1,6 @@
-//O(n + k)
+//Time: O(n + k)
 //Solution: Greedy
+//Problem: Minimum Sum of Squared Difference
 var minSumSquareDiff = function (nums1, nums2, k1, k2) {
   let k = k1 + k2;
   const n = nums1.length;

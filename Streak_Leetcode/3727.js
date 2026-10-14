@@ -1,6 +1,6 @@
 //Time: O(nlogn)
-//Space: O(n)
 //Solution: Greedy
+//Problem: Maximum Alternating Sum of Squares
 var maxAlternatingSum = function(nums) {
     const sq = nums.map(x => x * x).sort((a, b) => a - b);
     const n = sq.length;
