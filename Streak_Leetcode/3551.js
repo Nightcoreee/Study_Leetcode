@@ -13,11 +13,9 @@ function minSwaps(nums) {
 
   const n = nums.length;
 
-  // idx[j] = chỉ số gốc của phần tử phải đứng ở vị trí j sau khi sắp xếp
   const idx = Array.from({ length: n }, (_, i) => i);
   idx.sort((a, b) => digitSum(nums[a]) - digitSum(nums[b]) || nums[a] - nums[b]);
 
-  // Đếm số chu trình của hoán vị idx
   const visited = new Array(n).fill(false);
   let cycles = 0;
   for (let i = 0; i < n; i++) {
@@ -30,7 +28,6 @@ function minSwaps(nums) {
     }
   }
 
-  // Mỗi chu trình độ dài k cần k - 1 lần swap, tổng = n - số chu trình
   return n - cycles;
 }
 

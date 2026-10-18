@@ -9,13 +9,20 @@ var minSumSquareDiff = function (nums1, nums2, k1, k2) {
   const diffs = new Array(n);
   for (let i = 0; i < n; i++) {
     diffs[i] = Math.abs(nums1[i] - nums2[i]);
-    if (diffs[i] > maxD) maxD = diffs[i];
+    if (diffs[i] > maxD) {
+      maxD = diffs[i];
+    }
   }
+  
   const cnt = new Array(maxD + 1).fill(0);
-  for (const d of diffs) cnt[d]++;
+  for (const d of diffs) {
+    cnt[d]++;
+  }
 
   for (let v = maxD; v >= 1 && k > 0; v--) {
-    if (cnt[v] === 0) continue;
+    if (cnt[v] === 0) {
+       continue;
+    }
     if (k >= cnt[v]) {
       k -= cnt[v];
       cnt[v - 1] += cnt[v];
