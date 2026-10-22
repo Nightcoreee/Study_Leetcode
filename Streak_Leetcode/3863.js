@@ -27,8 +27,12 @@ const n = s.length;
         mx = c;
     }
   }
-  if (s[0] === mn || s[n - 1] === mx) return 1;
-  if (!s.slice(0, n - 1).includes(mn) && !s.slice(1).includes(mx)) return 3;
+  if (s[0] === mn || s[n - 1] === mx) {
+    return 1;
+  }
+  if (!s.slice(0, n - 1).includes(mn) && !s.slice(1).includes(mx)) {
+    return 3;
+  }
   return 2;
 };
 
