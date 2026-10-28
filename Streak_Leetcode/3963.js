@@ -2,6 +2,23 @@
 // Time: O(n^2)
 // Solution: Brute Force
 
+// L direction
+var createGrid = function(m, n) {
+    const grid = Array.from({length: m}, () => Array(n).fill('#'));
+
+    for(let j = 0; j < n; j++) {
+        grid[m - 1][j] = '.';
+    }
+
+    for(let i = 0; i < m; i++) {
+        grid[i][0] = '.';
+    }
+
+    return grid.map(row => row.join(''));
+};
+
+
+// L reverse
 var createGrid = function(m, n) {
     const grid = Array.from({length: m}, () => Array(n).fill('#'));
 
@@ -16,7 +33,32 @@ var createGrid = function(m, n) {
     return grid.map(row => row.join(''));
 };
 
-console.log(createGrid(3, 2));
+
+// Solution: Zigzag
+// Time: O(n^2)
+var createGrid = function (m, n) {
+    const grid = Array.from({ length: m }, () => Array(n).fill('#'));
+
+    let i = 0, j = 0;
+    let goRight = true; 
+
+    while (i < m - 1 || j < n - 1) {
+        if (i === m - 1) {
+        j++;                   
+        } else if (j === n - 1) {
+        i++;                   
+        } else if (goRight) {
+        j++;
+        goRight = false;
+        } else {
+        i++;
+        goRight = true;
+        }
+        grid[i][j] = '.';
+  }
+
+  return grid.map(row => row.join(''));
+};
 
 
 // Other Solution
@@ -28,3 +70,6 @@ var createGrid = function(m, n) {
     }
     return grid;
 };
+
+
+console.log(createGrid(3, 2));
