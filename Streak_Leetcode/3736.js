@@ -13,4 +13,10 @@ var minMoves = function(nums) {
     return total;
 };
 
+// Other solution
+var minMoves = function(nums) {
+    const max = nums.reduce((a,c)=>Math.max(a,c),0)
+    return nums.reduce((a,c)=>a+max-c,0)
+};
+
 console.log(minMoves([2,1,3]));
