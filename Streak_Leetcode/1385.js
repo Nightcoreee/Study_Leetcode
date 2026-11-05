@@ -4,19 +4,19 @@
 // Solution: Binary Search
 
 var findTheDistanceValue = function(arr1, arr2, d) {
-    let cnt = 0
+    let cnt = 0;
     for (let i = 0; i < arr1.length; i ++) {
-        let j = 0
+        let j = 0;
         while (j < arr2.length) {
             let absDiff = Math.abs(arr1[i] - arr2[j])
             if (absDiff <= d) {
                 break
             }
             else {
-                j ++
+                j ++;
             }
         }
-        if (j === arr2.length) cnt ++
+        if (j === arr2.length) cnt ++;
     }
 
     return cnt;
