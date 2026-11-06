@@ -29,17 +29,17 @@ var findTheDistanceValue = function(arr1, arr2, d) {
     arr2.sort((a,b) => a - b);
     
     for (const n of arr1) {
-        let left = 0;
-        let right = arr2.length;
-        while (left < right) {
-            const mid = (left + right) >> 1;
+        let low = 0;
+        let high = arr2.length;
+        while (low < high) {
+            const mid = (low + high) >> 1;
             if (arr2[mid] < n - d) {
-                left = mid + 1;
+                low = mid + 1;
             } else {
-                right = mid;
+                high = mid;
             }
         }
-        if (left === arr2.length || arr2[left] > n + d) {
+        if (low === arr2.length || arr2[low] > n + d) {
             cnt++;
         }
     }
