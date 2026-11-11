@@ -1,7 +1,7 @@
 // Problem: Find the Distance Value Between Two Arrays
 // Time: O(n log m)
 // Space: O(1)
-// Solution: Binary Search
+
 
 var findTheDistanceValue = function(arr1, arr2, d) {
     let cnt = 0;
@@ -10,7 +10,7 @@ var findTheDistanceValue = function(arr1, arr2, d) {
         while (j < arr2.length) {
             let absDiff = Math.abs(arr1[i] - arr2[j])
             if (absDiff <= d) {
-                break
+                break;
             }
             else {
                 j ++;
@@ -23,7 +23,7 @@ var findTheDistanceValue = function(arr1, arr2, d) {
 };
 
 
-
+// Solution: Binary Search
 var findTheDistanceValue = function(arr1, arr2, d) {
     let cnt = 0;
     arr2.sort((a,b) => a - b);
@@ -33,8 +33,11 @@ var findTheDistanceValue = function(arr1, arr2, d) {
         let high = arr2.length;
         while (low < high) {
             const mid = (low + high) >> 1;
+            // Các phần tử bên trái
             if (arr2[mid] < n - d) {
                 low = mid + 1;
+
+            // Các phần tử bên phải
             } else {
                 high = mid;
             }
@@ -43,7 +46,7 @@ var findTheDistanceValue = function(arr1, arr2, d) {
             cnt++;
         }
     }
-    return cnt;
+    return cnt; 
 };
 
 console.log(findTheDistanceValue([4,5,8], [10,9,1,8], 2));
