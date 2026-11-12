@@ -3,6 +3,10 @@
 // Space: O(1)
 
 var longestMonotonicSubarray = function(nums) {
+    if(nums.length === 1) {
+        return 1;
+    }
+    
     let ans = 1;
     let inc = 1, dec = 1;
 
